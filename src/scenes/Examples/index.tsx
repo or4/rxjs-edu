@@ -1,10 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Combination } from './Combination';
 
-import { CombineAll } from './combination/CombineAll';
-import { CombineLatest } from './combination/CombineLatest';
-import { Concat } from './combination/Concat';
 
 type Props = {
 };
@@ -18,15 +16,11 @@ export class Examples extends React.PureComponent<Props, State> {
         <h3>Examples</h3>
 
         <div className={'menu'}>
-          <Link to="/examples/combineAll">combineAll</Link>
-          <Link to="/examples/combineLatest">combineLatest</Link>
-          <Link to="/examples/concat">concat</Link>
+          <Link to="/examples/combination">combination</Link>
         </div>
 
         <Switch>
-          <Route path="/examples/combineAll" component={CombineAll} />
-          <Route path="/examples/combineLatest" component={CombineLatest} />
-          <Route path="/examples/concat" component={Concat} />
+          <Route path="/examples/combination" component={Combination} />
         </Switch>
       </div>
     );
