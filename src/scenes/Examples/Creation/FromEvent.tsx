@@ -32,7 +32,7 @@ export class FromEvent extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>fromEvent</h5>
+        <h5>fromEvent - Turn event into observable sequence.</h5>
       </div>
     );
   }
