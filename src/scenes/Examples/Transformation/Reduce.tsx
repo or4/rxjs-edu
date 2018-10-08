@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class Range extends React.PureComponent<Props, State> {
+export class Reduce extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class Range extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>range</h5>
+        <h5>reduce</h5>
       </div>
     );
   }

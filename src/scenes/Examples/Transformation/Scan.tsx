@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class Of extends React.PureComponent<Props, State> {
+export class Scan extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class Of extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>of</h5>
+        <h5>scan</h5>
       </div>
     );
   }

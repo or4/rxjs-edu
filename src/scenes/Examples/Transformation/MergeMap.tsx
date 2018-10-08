@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class MergeAll extends React.PureComponent<Props, State> {
+export class MergeMap extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class MergeAll extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>mergeAll</h5>
+        <h5>mergeMap</h5>
       </div>
     );
   }

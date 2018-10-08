@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class Zip extends React.PureComponent<Props, State> {
+export class Timeout extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class Zip extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>zip</h5>
+        <h5>timeout</h5>
       </div>
     );
   }

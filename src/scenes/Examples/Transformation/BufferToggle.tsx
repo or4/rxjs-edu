@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class Merge extends React.PureComponent<Props, State> {
+export class BufferToggle extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class Merge extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>merge</h5>
+        <h5>bufferToggle</h5>
       </div>
     );
   }

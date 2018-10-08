@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class StartWith extends React.PureComponent<Props, State> {
+export class Finally extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class StartWith extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>startWith</h5>
+        <h5>finally</h5>
       </div>
     );
   }

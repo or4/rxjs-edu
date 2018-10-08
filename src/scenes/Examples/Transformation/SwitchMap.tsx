@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class Throw extends React.PureComponent<Props, State> {
+export class SwitchMap extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class Throw extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>throw</h5>
+        <h5>switchMap</h5>
       </div>
     );
   }

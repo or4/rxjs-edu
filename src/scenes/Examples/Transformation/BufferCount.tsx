@@ -22,7 +22,7 @@ const test3 = () => {
 const test4 = () => {
 };
 
-export class ConcatAll extends React.PureComponent<Props, State> {
+export class BufferCount extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
     // test2();
@@ -32,7 +32,7 @@ export class ConcatAll extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>concatAll</h5>
+        <h5>bufferCount</h5>
       </div>
     );
   }

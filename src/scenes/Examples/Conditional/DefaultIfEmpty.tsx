@@ -11,28 +11,28 @@ type State = {
 };
 
 const test1 = () => {
+  // emit 'Observable.of() Empty!' when empty, else any values from source
+  const exampleOne = rxjs.of().pipe(rxjsOp.defaultIfEmpty('Observable.of() Empty!'));
+  // output: 'Observable.of() Empty!'
+  const subscribe = exampleOne.subscribe(val => console.log(val));
 };
 
 const test2 = () => {
-};
-
-const test3 = () => {
-};
-
-const test4 = () => {
+  // emit 'Observable.empty()!' when empty, else any values from source
+  const example = rxjs.empty().pipe(rxjsOp.defaultIfEmpty('Observable.empty()!'));
+  // output: 'Observable.empty()!'
+  const subscribe = example.subscribe(val => console.log(val));
 };
 
 export class DefaultIfEmpty extends React.PureComponent<Props, State> {
   componentDidMount() {
-    // test1();
+    test1();
     // test2();
-    // test3();
-    // test4();
   }
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>defaultIfEmpty</h5>
+        <h5>defaultIfEmpty - Emit given value if nothing is emitted before completion.</h5>
       </div>
     );
   }
