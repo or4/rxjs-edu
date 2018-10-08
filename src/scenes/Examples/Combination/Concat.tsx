@@ -72,7 +72,7 @@ export class Concat extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>concat</h5>
+        <h5>concat - Subscribe to observables in order as previous completes, emit values.</h5>
       </div>
     );
   }

@@ -91,7 +91,7 @@ export class CombineLatest extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>combineLatest</h5>
+        <h5>combineLatest - When any observable emits a value, emit the latest value from each.</h5>
         <div>
           <button id="red">Red</button>
           <button id="black">Black</button>

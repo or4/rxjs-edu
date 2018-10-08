@@ -1,8 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-import * as rxjsOp from 'rxjs/operators';
-import * as rxjs from 'rxjs';
+import { pairwise, take } from 'rxjs/operators';
+import { interval } from 'rxjs';
 
 
 type Props = {
@@ -11,28 +11,23 @@ type State = {
 };
 
 const test1 = () => {
-};
-
-const test2 = () => {
-};
-
-const test3 = () => {
-};
-
-const test4 = () => {
+  //Returns: [0,1], [1,2], [2,3], [3,4], [4,5]
+  interval(1000)
+    .pipe(
+      pairwise(),
+      take(5)
+    )
+    .subscribe(console.log);
 };
 
 export class Pairwise extends React.PureComponent<Props, State> {
   componentDidMount() {
-    // test1();
-    // test2();
-    // test3();
-    // test4();
+    test1();
   }
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>pairwise</h5>
+        <h5>pairwise - Emit the previous and current values as an array.</h5>
       </div>
     );
   }

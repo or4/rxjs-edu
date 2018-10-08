@@ -49,7 +49,7 @@ export class CombineAll extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page'}>
-        <h5>combineAll</h5>
+        <h5>combineAll - When source observable completes use combineLatest with collected observables.</h5>
       </div>
     );
   }
