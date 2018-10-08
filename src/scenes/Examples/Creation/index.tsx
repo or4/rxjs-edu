@@ -2,50 +2,42 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import { CombineAll } from './CombineAll';
-import { CombineLatest } from './CombineLatest';
-import { Concat } from './Concat';
-import { ConcatAll } from './ConcatAll';
-import { ForkJoin } from './ForkJoin';
-import { Merge } from './Merge';
-import { MergeAll } from './MergeAll';
-import { Pairwise } from './Pairwise';
-import { Race } from './Race';
-import { StartWith } from './StartWith';
-import { WithLatestFrom } from './WithLatestFrom';
-import { Zip } from './Zip';
+import { Create } from './Create';
+import { Empty } from './Empty';
+import { From } from './From';
+import { FromEvent } from './FromEvent';
+import { Interval } from './Interval';
+import { Of } from './Of';
+import { Range } from './Range';
+import { Throw } from './Throw';
+import { Timer } from './Timer';
 
-export const Combination = () => (
+export const Creation = () => (
   <div className={'page'}>
-    <h5>combination</h5>
+    <h5>creation</h5>
     <div className={'menu'}>
-      <Link to="/examples/combination/combineAll">combineAll</Link>
-      <Link to="/examples/combination/combineLatest">combineLatest</Link>
-      <Link to="/examples/combination/concat">concat</Link>
-      <Link to="/examples/combination/concatAll">concatAll</Link>
-      <Link to="/examples/combination/forkJoin">forkJoin</Link>
-      <Link to="/examples/combination/merge">merge</Link>
-      <Link to="/examples/combination/mergeAll">mergeAll</Link>
-      <Link to="/examples/combination/pairwise">pairwise</Link>
-      <Link to="/examples/combination/race">race</Link>
-      <Link to="/examples/combination/startWith">startWith</Link>
-      <Link to="/examples/combination/withLatestFrom">withLatestFrom</Link>
-      <Link to="/examples/combination/zip">zip</Link>
+      <Link to="/examples/creation/create">create</Link>
+      <Link to="/examples/creation/empty">empty</Link>
+      <Link to="/examples/creation/from">from</Link>
+      <Link to="/examples/creation/fromEvent">fromEvent</Link>
+      <Link to="/examples/creation/interval">interval</Link>
+      <Link to="/examples/creation/of">of</Link>
+      <Link to="/examples/creation/range">range</Link>
+      <Link to="/examples/creation/throw">throw</Link>
+      <Link to="/examples/creation/timer">timer</Link>
+      <Link to="/examples/creation/zip">zip</Link>
     </div>
 
     <Switch>
-      <Route path="/examples/combination/combineAll" component={CombineAll} />
-      <Route path="/examples/combination/combineLatest" component={CombineLatest} />
-      <Route path="/examples/combination/concat" component={Concat} />
-      <Route path="/examples/combination/concatAll" component={ConcatAll} />
-      <Route path="/examples/combination/forkJoin" component={ForkJoin} />
-      <Route path="/examples/combination/merge" component={Merge} />
-      <Route path="/examples/combination/mergeAll" component={MergeAll} />
-      <Route path="/examples/combination/pairwise" component={Pairwise} />
-      <Route path="/examples/combination/race" component={Race} />
-      <Route path="/examples/combination/startWith" component={StartWith} />
-      <Route path="/examples/combination/withLatestFrom" component={WithLatestFrom} />
-      <Route path="/examples/combination/zip" component={Zip} />
+      <Route path="/examples/creation/create" component={Create} />
+      <Route path="/examples/creation/empty" component={Empty} />
+      <Route path="/examples/creation/from" component={From} />
+      <Route path="/examples/creation/fromEvent" component={FromEvent} />
+      <Route path="/examples/creation/interval" component={Interval} />
+      <Route path="/examples/creation/of" component={Of} />
+      <Route path="/examples/creation/range" component={Range} />
+      <Route path="/examples/creation/throw" component={Throw} />
+      <Route path="/examples/creation/timer" component={Timer} />
     </Switch>
   </div>
 );
