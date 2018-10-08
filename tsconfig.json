@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "esnext",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "allowUnreachableCode": true,
+    "outDir": "build/dist",
+    "paths": { },
+    "rootDir": "src",
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
+    "types": [],
+    "typeRoots": [
+      "src",
+      "node_modules/@types",
+      "node_modules/@machinomy"
+    ]
+  },
+  "exclude": [
+    "acceptance-tests",
+    "build",
+    "jest",
+    "node_modules/electron/node_modules/@types",
+    "node_modules",
+    "scripts",
+    "src/setupTests.ts",
+    "webpack"
+  ]
+}
