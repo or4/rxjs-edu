@@ -22,15 +22,15 @@ const test1 = () => {
 
 const test2 = () => {
   const subject = new Subject();
-  //scan example building an object over time
+  // scan example building an object over time
   const example = subject.pipe(
     scan((acc, curr) => Object.assign({}, acc, curr), {})
   );
-  //log accumulated values
+  // log accumulated values
   const subscribe = example.subscribe(val =>
     console.log('Accumulated object:', val)
   );
-  //next values into subject, adding properties to object
+  // next values into subject, adding properties to object
   // {name: 'Joe'}
   subject.next({ name: 'Joe' });
   // {name: 'Joe', age: 30}
@@ -41,9 +41,10 @@ const test2 = () => {
 
 const test3 = () => {
   // Accumulate values in an array, emit random values from this array.
+  const predicate = (a, c) => [...a, c];
   const scanObs = interval(1000)
     .pipe(
-      scan((a, c) => [...a, c], []),
+      scan(predicate, []),
       map(r => r[Math.floor(Math.random() * r.length)]),
       distinctUntilChanged()
     )

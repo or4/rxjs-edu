@@ -58,7 +58,9 @@ const test3 = () => {
 
 const test4 = () => {
   const countdownSeconds = 10;
-  const setHTML = id => val => (document.getElementById(id).innerHTML = val);
+  const setHTML = id => val => {
+    document.getElementById(id).innerHTML = val;
+  };
   const pauseButton = document.getElementById('pause');
   const resumeButton = document.getElementById('resume');
   const interval$ = interval(1000).pipe(mapTo(-1));
@@ -88,7 +90,7 @@ export class SwitchMap extends React.PureComponent<Props, State> {
       <div className={'page divs-with-margin-bottom'}>
         <h5>switchMap</h5>
         <h4>
-          Time remaining: <span id="remaining"></span>
+          Time remaining: <span id="remaining" />
         </h4>
         <button id="pause">
           Pause Timer

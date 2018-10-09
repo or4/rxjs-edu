@@ -32,7 +32,7 @@ const test2 = () => {
 const test3 = () => {
   const oneClickEvent = fromEvent(document, 'click').pipe(
     take(1),
-    tap(v => {
+    tap((v: any) => {
       document.getElementById(
         'locationDisplay'
       ).innerHTML = `Your first click was on location ${v.screenX}:${v.screenY}`;

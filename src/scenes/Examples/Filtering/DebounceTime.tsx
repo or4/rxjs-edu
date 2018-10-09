@@ -14,7 +14,7 @@ const test1 = () => {
   const input = document.getElementById('example');
 
   //for every keyup, map to current input value
-  const example = fromEvent(input, 'keyup').pipe(map(i => i.currentTarget.value));
+  const example = fromEvent(input, 'keyup').pipe(map(i => (i.currentTarget as any).value));
 
   //wait .5s between keyups to emit current value
   //throw away all other values

@@ -33,7 +33,7 @@ const test1 = () => {
   const subscriberOne = multi.subscribe(val => console.log(val));
   const subscriberTwo = multi.subscribe(val => console.log(val));
   //subscribe subject to source
-  multi.connect();
+  (multi as any).connect();
 };
 
 const test2 = () => {
@@ -49,7 +49,7 @@ const test2 = () => {
   //can use any type of subject
   const multi = example.pipe(multicast(() => new ReplaySubject(5)));
   //subscribe subject to source
-  multi.connect();
+  (multi as any).connect();
 
   setTimeout(() => {
   /*
