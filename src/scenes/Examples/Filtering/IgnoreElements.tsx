@@ -11,14 +11,14 @@ type State = {
 };
 
 const test1 = () => {
-  //emit value every 100ms
+  // emit value every 100ms
   const source = interval(100);
-  //ignore everything but complete
+  // ignore everything but complete
   const example = source.pipe(
     take(5),
     ignoreElements()
   );
-  //output: "COMPLETE!"
+  // output: "COMPLETE!"
   const subscribe = example.subscribe(
     val => console.log(`NEXT: ${val}`),
     val => console.log(`ERROR: ${val}`),
@@ -27,9 +27,9 @@ const test1 = () => {
 };
 
 const test2 = () => {
-  //emit value every 100ms
+  // emit value every 100ms
   const source = interval(100);
-  //ignore everything but error
+  // ignore everything but error
   const error = source.pipe(
     mergeMap(val => {
       if (val === 4) {
@@ -39,7 +39,7 @@ const test2 = () => {
     }),
     ignoreElements()
   );
-  //output: "ERROR: ERROR AT 4"
+  // output: "ERROR: ERROR AT 4"
   const subscribe = error.subscribe(
     val => console.log(`NEXT: ${val}`),
     val => console.log(`ERROR: ${val}`),
