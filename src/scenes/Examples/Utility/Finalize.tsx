@@ -1,8 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-import * as rxjsOp from 'rxjs/operators';
-import * as rxjs from 'rxjs';
+import { interval } from 'rxjs';
+import { take, finalize } from 'rxjs/operators';
 
 
 type Props = {
@@ -11,6 +11,14 @@ type State = {
 };
 
 const test1 = () => {
+  //emit value in sequence every 1 second
+  const source = interval(1000);
+  //output: 0,1,2,3,4,5....
+  const example = source.pipe(
+    take(5), //take only the first 5 values
+    finalize(() => console.log('Sequence complete')) // Execute when the observable completes
+  );
+  const subscribe = example.subscribe(val => console.log(val));
 };
 
 const test2 = () => {

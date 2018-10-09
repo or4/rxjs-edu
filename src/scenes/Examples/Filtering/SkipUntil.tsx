@@ -1,8 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-import * as rxjsOp from 'rxjs/operators';
-import * as rxjs from 'rxjs';
+import { interval, timer } from 'rxjs';
+import { skipUntil } from 'rxjs/operators';
 
 
 type Props = {
@@ -11,6 +11,12 @@ type State = {
 };
 
 const test1 = () => {
+  //emit every 1s
+  const source = interval(1000);
+  //skip emitted values from source until inner observable emits (6s)
+  const example = source.pipe(skipUntil(timer(6000)));
+  //output: 5...6...7...8........
+  const subscribe = example.subscribe(val => console.log(val));
 };
 
 const test2 = () => {

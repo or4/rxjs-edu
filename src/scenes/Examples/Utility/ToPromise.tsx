@@ -32,7 +32,7 @@ export class ToPromise extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>toPromise</h5>
+        <h5>toPromise has been deprecated! (RxJS 5.5+)</h5>
       </div>
     );
   }

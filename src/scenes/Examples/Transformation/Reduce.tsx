@@ -1,8 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-import * as rxjsOp from 'rxjs/operators';
-import * as rxjs from 'rxjs';
+import { of } from 'rxjs';
+import { reduce } from 'rxjs/operators';
 
 
 type Props = {
@@ -11,6 +11,10 @@ type State = {
 };
 
 const test1 = () => {
+  const source = of(1, 2, 3, 4);
+  const example = source.pipe(reduce((acc, val) => acc + val));
+  //output: Sum: 10'
+  const subscribe = example.subscribe(val => console.log('Sum:', val));
 };
 
 const test2 = () => {

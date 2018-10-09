@@ -32,7 +32,7 @@ export class Audit extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className={'page divs-with-margin-bottom'}>
-        <h5>audit</h5>
+        <h5>audit - Ignore for time based on provided observable, then emit most recent value</h5>
       </div>
     );
   }
