@@ -1,12 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-// import * as rxjsOp from 'rxjs/operators';
-// import * as rxjs from 'rxjs';
-
 import { timer, interval, Observable, throwError, } from 'rxjs';
 import { map, tap, retryWhen, delayWhen, mergeMap, finalize  } from 'rxjs/operators';
-
 
 type Props = {
 };
@@ -14,36 +10,36 @@ type State = {
 };
 
 const test1 = () => {
-  //emit value every 1s
-  const source = interval(1000);
+  // emit value every 1s
+  const source = interval(100);
   const example = source.pipe(
     map(val => {
       if (val > 5) {
-      //error will be picked up by retryWhen
+        // error will be picked up by retryWhen
         throw val;
       }
       return val;
     }),
     retryWhen(errors =>
       errors.pipe(
-      //log error message
+        // log error message
         tap(val => console.log(`Value ${val} was too high!`)),
-        //restart in 5 seconds
-        delayWhen(val => timer(val * 1000))
+        // restart in 5 seconds
+        delayWhen(val => timer(val * 100))
       )
     )
   );
   /*
-  output:
-  0
-  1
-  2
-  3
-  4
-  5
-  "Value 6 was too high!"
-  --Wait 5 seconds then repeat
-*/
+    output:
+    0
+    1
+    2
+    3
+    4
+    5
+    "Value 6 was too high!"
+    --Wait 5 seconds then repeat
+  */
   const subscribe = example.subscribe(val => console.log(val));
 };
 const genericRetryStrategy = ({
@@ -128,7 +124,7 @@ const test4 = () => {
 
 export class RetryWhen extends React.PureComponent<Props, State> {
   componentDidMount() {
-    // test1();
+    test1();
     // test2();
     // test3();
     // test4();

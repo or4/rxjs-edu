@@ -10,15 +10,15 @@ export const ErrorHandling = () => (
   <div className={'page'}>
     <h5>error handling</h5>
     <div className={'menu'}>
-      <Link to="/examples/error/catch">catch</Link>
-      <Link to="/examples/error/retry">retry</Link>
-      <Link to="/examples/error/retryWhen">retryWhen</Link>
+      <Link to="/examples/errorHandling/catch">catch</Link>
+      <Link to="/examples/errorHandling/retry">retry</Link>
+      <Link to="/examples/errorHandling/retryWhen">retryWhen</Link>
     </div>
 
     <Switch>
-      <Route path="/examples/error/catch" component={Catch} />
-      <Route path="/examples/error/retry" component={Retry} />
-      <Route path="/examples/error/retryWhen" component={RetryWhen} />
+      <Route path="/examples/errorHandling/catch" component={Catch} />
+      <Route path="/examples/errorHandling/retry" component={Retry} />
+      <Route path="/examples/errorHandling/retryWhen" component={RetryWhen} />
     </Switch>
   </div>
 );
