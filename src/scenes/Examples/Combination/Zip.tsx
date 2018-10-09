@@ -35,6 +35,15 @@ const test2 = () => {
   const subscribe = example.subscribe(val => console.log(val));
 };
 
+const test3 = () => {
+  const source = rxjs.zip(
+    rxjs.from(['Joe', 'Frank', 'Bob']),
+    rxjs.interval(10000),
+    rxjs.interval(1000),
+  );
+  // output array ['Joe', 0, 0], ['Frank', 1, 1], ['Bob', 2, 2]
+  source.subscribe(val => console.log('source', val));
+};
 
 
 export class Zip extends React.PureComponent<Props, State> {

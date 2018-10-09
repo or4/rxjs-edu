@@ -45,7 +45,6 @@ const test2 = () => {
     val => console.log(`ERROR: ${val}`),
     () => console.log('SECOND COMPLETE!')
   );
-
 };
 
 const test3 = () => {
@@ -57,7 +56,7 @@ const test4 = () => {
 export class IgnoreElements extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
-    // test2();
+    test2();
     // test3();
     // test4();
   }

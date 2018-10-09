@@ -1,9 +1,8 @@
 import React from 'react';
 
 // RxJS v6+
-import { interval, timer } from 'rxjs';
+import { interval, timer, from } from 'rxjs';
 import { skipUntil } from 'rxjs/operators';
-
 
 type Props = {
 };
@@ -11,15 +10,25 @@ type State = {
 };
 
 const test1 = () => {
-  //emit every 1s
+  // emit every 1s
   const source = interval(1000);
-  //skip emitted values from source until inner observable emits (6s)
+  // skip emitted values from source until inner observable emits (6s)
   const example = source.pipe(skipUntil(timer(6000)));
-  //output: 5...6...7...8........
+  // output: 5...6...7...8........
   const subscribe = example.subscribe(val => console.log(val));
 };
 
 const test2 = () => {
+  // emit every 1s
+  const source = interval(100);
+  const promise = from(new Promise(resolve => setTimeout(() => {
+    resolve('promiseSource2');
+  }, 2000)));
+
+  // skip emitted values from source until inner observable emits (6s)
+  const example = source.pipe(skipUntil(promise));
+  // output: 5...6...7...8........
+  const subscribe = example.subscribe(val => console.log(val));
 };
 
 const test3 = () => {
@@ -31,7 +40,7 @@ const test4 = () => {
 export class SkipUntil extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
-    // test2();
+    test2();
     // test3();
     // test4();
   }
