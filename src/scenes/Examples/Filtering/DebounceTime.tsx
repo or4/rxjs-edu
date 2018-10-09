@@ -13,14 +13,14 @@ type State = {
 const test1 = () => {
   const input = document.getElementById('example');
 
-  //for every keyup, map to current input value
+  // for every keyup, map to current input value
   const example = fromEvent(input, 'keyup').pipe(map(i => (i.currentTarget as any).value));
 
-  //wait .5s between keyups to emit current value
-  //throw away all other values
+  // wait .5s between keyups to emit current value
+  // throw away all other values
   const debouncedInput = example.pipe(debounceTime(500));
 
-  //log values
+  // log values
   const subscribe = debouncedInput.subscribe(val => {
     console.log(`Debounced Input: ${val}`);
   });
@@ -37,7 +37,7 @@ const test4 = () => {
 
 export class DebounceTime extends React.PureComponent<Props, State> {
   componentDidMount() {
-    // test1();
+    test1();
     // test2();
     // test3();
     // test4();
@@ -46,6 +46,7 @@ export class DebounceTime extends React.PureComponent<Props, State> {
     return (
       <div className={'page divs-with-margin-bottom'}>
         <h5>debounceTime - Discard emitted values that take less than the specified time between output</h5>
+        <input type="text" id="example" />
       </div>
     );
   }

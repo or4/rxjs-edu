@@ -32,19 +32,23 @@ const test1 = () => {
 
 const test2 = () => {
   // emit every 5 seconds
-  const first = rxjs.interval(3000);
+  const first = rxjs.interval(3000).pipe(rxjsOp.mapTo('first'));
   // emit every 1 second
-  const second = rxjs.interval(1000);
+  const second = rxjs.interval(1000).pipe(rxjsOp.mapTo('second'));
   // used as instance method
   const example = first.pipe(rxjsOp.merge(second));
   // output: 0,1,0,2....
   const subscribe = example.subscribe(val => console.log(val));
 };
 
+const test3 = () => {
+
+};
+
 export class Merge extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
-    // test2();
+    test2();
   }
   render() {
     return (
