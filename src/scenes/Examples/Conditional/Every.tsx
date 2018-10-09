@@ -3,7 +3,7 @@ import React from 'react';
 // RxJS v6+
 import * as rxjsOp from 'rxjs/operators';
 import * as rxjs from 'rxjs';
-
+// import * as R from 'ramda';
 
 type Props = {
 };
@@ -16,6 +16,7 @@ const test1 = () => {
   const example = source.pipe(
     // is every value even?
     rxjsOp.every(val => val % 2 === 0)
+    // R.all((val: number) => val % 2 === 0) as any
   );
   // output: false
   const subscribe = example.subscribe(val => console.log(val));
@@ -40,7 +41,7 @@ const test4 = () => {
 
 export class Every extends React.PureComponent<Props, State> {
   componentDidMount() {
-    // test1();
+    test1();
     // test2();
     // test3();
     // test4();

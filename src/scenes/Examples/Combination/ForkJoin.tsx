@@ -1,8 +1,6 @@
 import React from 'react';
 
 // RxJS v6+
-// import * as rxjs from 'rxjs';
-
 import { delay, take, mergeMap, catchError } from 'rxjs/operators';
 import { forkJoin, of, interval, throwError } from 'rxjs';
 

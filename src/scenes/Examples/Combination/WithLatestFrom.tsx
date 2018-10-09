@@ -22,11 +22,11 @@ const test1 = () => {
     })
   );
   /*
-  "First Source (5s): 0 Second Source (1s): 4"
-  "First Source (5s): 1 Second Source (1s): 9"
-  "First Source (5s): 2 Second Source (1s): 14"
-  ...
-*/
+    "First Source (5s): 0 Second Source (1s): 4"
+    "First Source (5s): 1 Second Source (1s): 9"
+    "First Source (5s): 2 Second Source (1s): 14"
+    ...
+  */
   const subscribe = example.subscribe(val => console.log(val));
 };
 
