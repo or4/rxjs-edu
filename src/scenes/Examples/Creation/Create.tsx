@@ -1,9 +1,7 @@
 import React from 'react';
 
 // RxJS v6+
-import * as rxjsOp from 'rxjs/operators';
 import * as rxjs from 'rxjs';
-
 
 type Props = {
 };
@@ -47,18 +45,10 @@ const test2 = () => {
   }, 10000);
 };
 
-const test3 = () => {
-};
-
-const test4 = () => {
-};
-
 export class Create extends React.PureComponent<Props, State> {
   componentDidMount() {
     // test1();
-    // test2();
-    // test3();
-    // test4();
+    test2();
   }
   render() {
     return (
