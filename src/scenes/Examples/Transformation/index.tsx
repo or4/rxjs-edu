@@ -11,7 +11,6 @@ import { ConcatMap } from './ConcatMap';
 import { ConcatMapTo } from './ConcatMapTo';
 import { ExhaustMap } from './ExhaustMap';
 import { Expand } from './Expand';
-import { FlatMap } from './FlatMap';
 import { GroupBy } from './GroupBy';
 import { Map } from './Map';
 import { MapTo } from './MapTo';
@@ -40,7 +39,6 @@ export const Transformation = () => (
       <Link to="/examples/transformation/concatMapTo">concatMapTo</Link>
       <Link to="/examples/transformation/exhaustMap">exhaustMap</Link>
       <Link to="/examples/transformation/expand">expand</Link>
-      <Link to="/examples/transformation/flatMap">flatMap</Link>
       <Link to="/examples/transformation/groupBy">groupBy</Link>
       <Link to="/examples/transformation/map">map</Link>
       <Link to="/examples/transformation/mapTo">mapTo</Link>
@@ -67,7 +65,6 @@ export const Transformation = () => (
       <Route path="/examples/transformation/concatMapTo" component={ConcatMapTo} />
       <Route path="/examples/transformation/exhaustMap" component={ExhaustMap} />
       <Route path="/examples/transformation/expand" component={Expand} />
-      <Route path="/examples/transformation/flatMap" component={FlatMap} />
       <Route path="/examples/transformation/groupBy" component={GroupBy} />
       <Route path="/examples/transformation/map" component={Map} />
       <Route path="/examples/transformation/mapTo" component={MapTo} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 
+import { Promises } from './Promises';
 import { Combination } from './Combination';
 import { Conditional } from './Conditional';
 import { Creation } from './Creation';
@@ -25,6 +26,7 @@ export class Examples extends React.PureComponent<Props, State> {
         <h3>Examples</h3>
 
         <div className={'menu'}>
+          <Link to="/examples/promises">nested promises</Link>
           <Link to="/examples/combination">combination</Link>
           <Link to="/examples/conditional">conditional</Link>
           <Link to="/examples/creation">creation</Link>
@@ -37,6 +39,7 @@ export class Examples extends React.PureComponent<Props, State> {
         </div>
 
         <Switch>
+          <Route path="/examples/promises" component={Promises} />
           <Route path="/examples/combination" component={Combination} />
           <Route path="/examples/conditional" component={Conditional} />
           <Route path="/examples/creation" component={Creation} />
